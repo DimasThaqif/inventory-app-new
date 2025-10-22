@@ -20,4 +20,16 @@ class ItemController extends Controller
     {
         return inertia('Items/Add');
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'qty' => 'required|numeric|digits_between:1,11',
+        ]);
+
+        Item::create($request->all());
+
+        return redirect()->route('items.index')->with('success', 'Item added successfully.');
+    }
 }

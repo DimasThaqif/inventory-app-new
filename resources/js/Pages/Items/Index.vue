@@ -26,7 +26,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
                         <primary-button>
-                            <a href="/item/create" class="no-underline text-white" >Add Item</a>
+                            <a href="/items/create" class="no-underline text-white" >Add Item</a>
                         </primary-button>
 
 
