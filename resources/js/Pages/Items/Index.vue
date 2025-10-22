@@ -5,12 +5,7 @@
 </script>
 
 <template>
-
-<div>
-    <h1>Item list</h1>
-    <ul>
-        <li v-for="item in items" :key="item.id">{{ item }}</li>
-    </ul>
-</div>
-
+    <div>
+        <h1></h1>
+    </div>
 </template>
