@@ -15,4 +15,9 @@ class ItemController extends Controller
             'items' => $items,
         ]);
     }
+
+    public function add()
+    {
+        return inertia('Items/Add');
+    }
 }

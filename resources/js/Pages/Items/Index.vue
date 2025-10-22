@@ -1,6 +1,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+
     defineProps({
         items: Array
     })
@@ -23,6 +25,11 @@ import { Head } from '@inertiajs/vue3';
                 <div
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
+                        <primary-button>
+                            <a href="/item/create" class="no-underline text-white" >Add Item</a>
+                        </primary-button>
+
+
                         <table class="table-auto w-full mt-4 border-collapse border border-gray-200">
                             <thead class="bg-gray-50">
                                 <tr>
