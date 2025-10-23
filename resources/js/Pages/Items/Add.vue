@@ -36,7 +36,7 @@ const submitForm = () => {
                                 <input type="text" v-model="form.name" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required />
                             </div>
                             <div class="mb-4">
-                                <label for="qty" class="block text-sm font-medium text-gray-700">Quantity</label>
+                                <label for="qty" class="block text-sm font-medium text-gray-700">Quantityy</label>
                                 <input type="number" v-model="form.qty" id="qty" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required />
                             </div>
                             <div class="flex items-center justify-end">
