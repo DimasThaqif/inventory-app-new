@@ -33,4 +33,30 @@ class ItemController extends Controller
 
         return redirect()->route('items.index')->with('success', 'Item added successfully.');
     }
+
+    public function edit($id)
+    {
+        $item = Item::findOrFail($id);
+
+
+        return inertia('Items/Edit', [
+            'item' => $item,
+        ]);
+    }
+
+    public function update(Request $request, $id)
+{
+    $item = Item::findOrFail($id);
+
+    $request->validate([
+        'name' => 'required|string|max:255|unique:items,name,' . $item->id,
+        'unit' => 'required|string|max:100',
+        'qty' => 'nullable|numeric|digits_between:1,11',
+    ]);
+
+    $item->update($request->all());
+
+    return redirect()->route('items.index')->with('success', 'Item updated successfully.');
+}
+
 }

@@ -27,6 +27,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/items', [ItemController::class, 'index'])->name('items.index');
     Route::get('/items/create', [ItemController::class, 'add'])->name('items.add');
     Route::post('/items', [ItemController::class, 'store'])->name('items.store');
+    Route::get('/items/{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
+    Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit');
+    Route::put('/items/{id}', [ItemController::class, 'update'])->name('items.update');
 });
 
 require __DIR__.'/auth.php';
