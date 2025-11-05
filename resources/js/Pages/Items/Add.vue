@@ -5,7 +5,8 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { useForm } from '@inertiajs/vue3';
 const form = useForm({
     name: '',
-    qty: 0
+    qty: 0,
+    unit: '',
 });
 
 const submitForm = () => {
@@ -40,6 +41,11 @@ const submitForm = () => {
                                 <label for="qty" class="block text-sm font-medium text-gray-700">Quantityy</label>
                                 <input type="number" v-model="form.qty" id="qty" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required />
                                 <div class="bg-red-200 p-2 mt-2 rounded" v-if="form.errors.qty">{{ form.errors.qty }}</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="unit" class="block text-sm font-medium text-gray-700">Unit</label>
+                                <input type="text" v-model="form.unit" id="unit" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required />
+                                <div class="bg-red-200 p-2 mt-2 rounded" v-if="form.errors.unit">{{ form.errors.unit }}</div>
                             </div>
                             <div class="flex items-center justify-end">
                                 <primary-button>

@@ -39,6 +39,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
                                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unit</th>
                                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
                                 </tr>
                             </thead>
@@ -47,6 +48,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                                     <td class="px-6 py-4 whitespace-nowrap">{{ ++index }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ item.name }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ item.qty }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">{{ item.unit }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap"> edit | stock card</td>
                                 </tr>
                             </tbody>
