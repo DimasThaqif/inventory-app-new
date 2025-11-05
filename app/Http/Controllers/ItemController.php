@@ -24,7 +24,7 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:items,name',
             'qty' => 'required|numeric|digits_between:1,11',
             'unit' => 'required|string|max:100',
         ]);
