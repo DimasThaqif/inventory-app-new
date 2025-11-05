@@ -29,8 +29,8 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                             <a href="/items/create" class="no-underline text-white" >Add Item</a>
                         </primary-button>
 
-                        <div v-if="$page.props.flash.message" class="alert">
-                            {{ $page.props.flash.message }}
+                        <div v-if="$page.props.flash.success" class="mt-4 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
+                            {{ $page.props.flash.success }}
                         </div>
 
                         <table class="table-auto w-full mt-4 border-collapse border border-gray-200">
