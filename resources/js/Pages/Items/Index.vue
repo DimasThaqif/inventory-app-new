@@ -10,7 +10,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 
 <template>
      <Head title="Items" />
-    
+
     <AuthenticatedLayout>
         <template #header>
             <h2
@@ -29,6 +29,9 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                             <a href="/items/create" class="no-underline text-white" >Add Item</a>
                         </primary-button>
 
+                        <div v-if="$page.props.flash.message" class="alert">
+                            {{ $page.props.flash.message }}
+                        </div>
 
                         <table class="table-auto w-full mt-4 border-collapse border border-gray-200">
                             <thead class="bg-gray-50">
