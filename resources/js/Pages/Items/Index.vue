@@ -51,7 +51,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                                     <td class="px-6 py-4 whitespace-nowrap">{{ item.unit }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <a class="text-blue-400 hover:text-blue-700" :href="`/items/${item.id}/edit`">Edit</a> |
-                                        <a class="text-blue-400 hover:text-blue-700" href="">Edit Stock</a> |
+                                        <a class="text-blue-400 hover:text-blue-700" :href="`/items/${item.id}/edit-stock`">Edit Stock</a> |
                                         <a class="text-blue-400 hover:text-blue-700" href="">Stock Card</a>
                                     </td>
                                 </tr>

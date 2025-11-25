@@ -59,4 +59,13 @@ class ItemController extends Controller
     return redirect()->route('items.index')->with('success', 'Item updated successfully.');
 }
 
+    public function editStock($id)
+    {
+        $item = Item::findOrFail($id);
+
+        return inertia('Items/EditStock', [
+            'item' => $item,
+        ]);
+    }
+
 }
